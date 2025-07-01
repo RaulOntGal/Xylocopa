@@ -1,0 +1,40 @@
+>ADV_GB_2287 Xylocopa.sp
+>ADV_GB_4358 Xylocopa.sp
+>ADV_GB_5195 Xylocopa.sp
+>ADV_GB_2273 Xylocopa.sp
+>YB-BCI2943 Xylocopa sp. 1YB
+>RMNH.INS.1662424 Xylocopa amedaei
+>RMNH.INS.1662427 Xylocopa olivieri
+>RMNH.INS.1662428 Xylocopa olivieri
+>RMNH.INS.1662429 Xylocopa olivieri
+>BC ZSM HYM 17932 Xylocopa violacea
+>CCDB-21409-F05 Xylocopa virginica
+>sc_00252 Xylocopa.sp
+>sc_00422 Xylocopa.sp
+>sc_00897 Xylocopa.sp
+>ADV_GB_3169 Xylocopa.sp
+>ADV_GB_3433 Xylocopa.sp
+>ADV_GB_2177 Xylocopa.sp
+>ADV_GB_3154 Xylocopa.sp
+>ADV_GB_3317 Xylocopa.sp
+>BC ZSM HYM 11940 Xylocopa valga
+>CCDB-21409-F04 Xylocopa virginica
+>ADV_GB_4370 Xylocopa.sp
+>ADV_GB_3155 Xylocopa.sp
+>GUE06-BEES-289 Xylocopa virginica
+>GUE06-BEES-290 Xylocopa virginica
+>GUE06-BEES-304 Xylocopa virginica
+>gvc10829-1L Xylocopa sp.
+>BC ZSM HYM 01855 Xylocopa violacea
+>sc_00221 Xylocopa.sp
+>sc_00896 Xylocopa.sp
+>ADV_GB_2050 Xylocopa.sp
+>ADV_GB_2274 Xylocopa.sp
+>ADV_GB_0915 Xylocopa.sp
+>RMNH.INS.1662425 Xylocopa amedaei
+>RMNH.INS.1662426 Xylocopa amedaei
+>BC ZSM HYM 01858 Xylocopa iris
+>KBGPE20 Xylocopa rufitarsis
+>ADV_GB_2065 Xylocopa.sp
+>ADV_GB_4369 Xylocopa.sp
+>BC ZSM HYM 11941 Xylocopa valga
