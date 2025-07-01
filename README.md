@@ -25,17 +25,22 @@ Note: This script was developed and tested on the UCLA Hoffman2 high-performance
 
 ### Usage
 
-Run the script from the terminal with the following options:
+Run the script from the terminal with the following command:
 
 ```bash
 bash BOLD_FASTA.sh -t TAXON [-l LOCATION] [-m MARKER] [-o OUTPUT]
+```
 
-### Options:
+**Options:**
 
--t TAXON: (required) Species name or taxa list.
+- `-t TAXON`: *(required)* Species name or taxa list.
+- `-l LOCATION`: *(optional)* Geographic region to filter sequences.
+- `-m MARKER`: *(optional)* Barcode marker (e.g., COI-5P, matK, rbcL).
+- `-o OUTPUT`: *(optional)* Output FASTA filename (default: `bold_data.fasta`).
 
--l LOCATION: (optional) Geographic region to filter sequences.
+---
 
--m MARKER: (optional) Barcode marker (e.g., COI-5P, matK, rbcL).
+### Output
 
--o OUTPUT: (optional) Output FASTA filename (default: bold_data.fasta).
+- A FASTA file containing the cleaned sequences.
+- A `.txt` file (`skipped_sequences.txt`) listing headers of sequences that were empty or inaccessible.
