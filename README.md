@@ -10,6 +10,8 @@ This project aims to analyze the phylogeny of the genus *Xylocopa*. The workflow
 - Generate consensus sequences for each species.
 - Align sequences and build gene trees.
 
+---
+
 ## BOLD FASTA Downloader
 
 I developed a bash script that automates downloading DNA sequences from the BOLD database in FASTA format, building on the [BOLD-CLI](https://github.com/CNuge/BOLD-CLI) tool.
@@ -38,12 +40,12 @@ bash BOLD_FASTA.sh -t TAXON [-l LOCATION] [-m MARKER] [-o OUTPUT]
 - `-m MARKER`: *(optional)* Barcode marker (e.g., COI-5P, matK, rbcL).
 - `-o OUTPUT`: *(optional)* Output FASTA filename (default: `bold_data.fasta`).
 
----
-
 ### Output
 
 - A FASTA file containing the cleaned sequences.
 - A `.txt` file (`skipped_sequences.txt`) listing headers of sequences that were empty or inaccessible.
+
+---
 
 ## NCBI Nucleotide Downloader
 
@@ -72,8 +74,6 @@ bash NCBI_NUCLEOTIDE.sh -t TAXON [-l LOCATION] [-m MARKER] [-o OUTPUT]
 - `-l LOCATION`: *(optional)* Geographic region to filter sequences.
 - `-m MARKER`: *(optional)* Gene name or marker.
 - `-o OUTPUT`: *(optional)* Output FASTA filename (default: `ncbi_data.fasta`).
-
----
 
 ### Output
 
