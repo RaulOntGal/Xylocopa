@@ -191,7 +191,7 @@ bash NCBI_NUCLEOTIDE.sh -t TAXON [-l LOCATION] [-m MARKER] [-o OUTPUT]
 
 [dedup_fasta.sh](/Sequences/FINAL/JOINED/dedup_fasta.sh)
 
-This script compares two FASTA files by their **accession numbers** (ignoring version numbers like `.1`, `.2`) and identifies sequences that are unique to each file or shared between them. It then outputs a merged, **deduplicated** FASTA file, retaining the **longest version** of each shared accession.
+This script compares two FASTA files by their **accession numbers** (ignoring version numbers like `.1`, `.2`) and identifies sequences that are unique to each file or shared between them. It then outputs a merged, **deduplicated** FASTA file, retaining the version from the first input file.
 
 It is useful for cleaning and combining datasets from different sources (e.g., BOLD and NCBI) before downstream phylogenetic analysis.
 
@@ -226,7 +226,6 @@ This script processes a FASTA file and splits it into **one file per species**, 
 - Produces:
   - `species_list.txt`: Tab-separated list of species and sequence counts.
   - Individual FASTA files, one per species, in a new directory.
-- Handles carriage returns and non-standard line endings.
 - Optionally enables debug output for troubleshooting.
 
 ### Assumptions
@@ -265,14 +264,14 @@ bash common_species.sh file1.txt file2.txt [file3.txt ...]
 ## Random Sequence Concatenator  
 [RandCatSeq.sh](/Sequences/FINAL/RESULTS/RandCatSeq.sh)
 
-This script concatenates sequences from multiple directories for a list of species by selecting **one random sequence per species per directory** and joining them into a single FASTA file. This is useful for creating multi-locus concatenated datasets from separate gene alignments or per-species FASTA files.
+This script concatenates sequences from multiple directories for a list of species by selecting **one random sequence per species per directory** and joining them into a single FASTA file. This is useful for creating multi-locus concatenated datasets from separate markers and per-species FASTA files.
 
 ### Features
 
 - Takes a species list file and one or more directories containing species FASTA files.
 - For each species, randomly selects one sequence from each directory (gene marker).
 - Concatenates the selected sequences into one FASTA entry per species.
-- Outputs a single concatenated FASTA file.
+- Outputs a single concatenated FASTA file, using the species name as the accession.
 - Optional debug mode to track files found and sequences extracted.
 
 ### Usage
