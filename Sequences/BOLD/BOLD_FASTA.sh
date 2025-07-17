@@ -5,7 +5,7 @@ OUTFILE="bold_data.fasta"
 
 # Help message
 function show_help {
-    echo "BOLD FASTA sequence downloader"
+    echo "BOLD FASTA sequence downloader v2"
     echo ""
     echo "Usage: $0 -t TAXON [-l LOCATION] [-m MARKER] [-o OUTPUT]"
     echo ""
@@ -35,7 +35,7 @@ if [ -z "$TAXON" ]; then
     show_help
 fi
 
-# Debug
+# Debug info
 echo "DEBUG:"
 echo "TAXON: $TAXON"
 echo "GEO: $GEO"
@@ -43,7 +43,7 @@ echo "MARKER: $MARKER"
 echo "OUTFILE: $OUTFILE"
 echo ""
 
-# Build command
+# Build command args array for BOLD-CLI
 CMD_ARGS=(-taxon "$TAXON" -output "$OUTFILE")
 [ -n "$GEO" ] && CMD_ARGS+=(-geo "$GEO")
 [ -n "$MARKER" ] && CMD_ARGS+=(-marker "$MARKER")
@@ -51,19 +51,20 @@ CMD_ARGS=(-taxon "$TAXON" -output "$OUTFILE")
 echo "Downloading ${GEO:-all locations} ${MARKER:-all markers} $TAXON sequences from BOLD..."
 "$BOLD_CLI" "${CMD_ARGS[@]}"
 
-# Convert to .fasta
-cat "$OUTFILE" | cut -f2,20,22,72 | \
-awk -F'\t' '{
-  header = ">" $1;
-  species = ($3 == "" || $3 == "-") ? $2 ".sp" : $3;
-  seq = $4;
+# Convert to .fasta with cleaned accession numbers (no spaces)
+awk -F'\t' 'NR > 2 {
+  accession = $2;
+  gsub(/ /, "", accession);   # Remove any spaces in accession number
+  species = ($22 == "" || $22 == "-") ? $20 ".sp" : $22;
+  seq = $72;
+  header = ">" accession;
   print header " " species;
   for (i=1; i<=length(seq); i+=60) {
     print substr(seq, i, 60);
   }
-}' | tail -n +3 > tmp_fasta
+}' "$OUTFILE" > tmp_fasta
 
-#Remove empty sequences
+# Remove empty sequences
 awk '
   BEGIN { skipped=0; kept=0; }
   /^>/ {
@@ -91,9 +92,6 @@ awk '
       print skipped_headers > "skipped_sequences.txt";
     }
   }
-' tmp_fasta > $OUTFILE
+' tmp_fasta > "$OUTFILE"
 
 rm tmp_fasta
-
-echo "Final cleaned FASTA is saved as $OUTFILE"
-

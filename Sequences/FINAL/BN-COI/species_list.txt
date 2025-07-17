@@ -1,0 +1,163 @@
+Hymenoptera sp.	3
+Xylocopa ARG01	1
+Xylocopa ARG02	2
+Xylocopa ARG03	3
+Xylocopa ARG04	2
+Xylocopa ARGPRY01	2
+Xylocopa AUS01	7
+Xylocopa GHA2	1
+Xylocopa GHA4	2
+Xylocopa GHAZ2	1
+Xylocopa GHAZ5	2
+Xylocopa ISR01	4
+Xylocopa KEN01	1
+Xylocopa KEN05	2
+Xylocopa KENSPAA	1
+Xylocopa KGZ01	3
+Xylocopa OMN2	1
+Xylocopa PRY01	1
+Xylocopa SE Asia 03	3
+Xylocopa SE Asia 04	1
+Xylocopa VNM01	1
+Xylocopa VNM02	2
+Xylocopa VNM05	1
+Xylocopa VNM06	1
+Xylocopa Xylocopa mozsp1	1
+Xylocopa abbreviata	2
+Xylocopa acutipennis	2
+Xylocopa aeratus	2
+Xylocopa aestuans	29
+Xylocopa aethiopica	1
+Xylocopa aff. californica	5
+Xylocopa albifrons	1
+Xylocopa albinotum	14
+Xylocopa amamensis	12
+Xylocopa appendiculata	28
+Xylocopa aruana	1
+Xylocopa augusti	1
+Xylocopa auripennis	5
+Xylocopa bambusae	1
+Xylocopa basalis	3
+Xylocopa bimaculata	3
+Xylocopa bomboides	3
+Xylocopa bombylans	2
+Xylocopa brasilianorum	1
+Xylocopa bryorum	1
+Xylocopa burkinae sp. nov	1
+Xylocopa caerulea	1
+Xylocopa caffra	98
+Xylocopa calens	4
+Xylocopa californica	14
+Xylocopa cantabrita	5
+Xylocopa cf. confusa	1
+Xylocopa chrysopoda	1
+Xylocopa ciliata	3
+Xylocopa circumvolans	3
+Xylocopa collaris	5
+Xylocopa confusa	2
+Xylocopa cubaecola	3
+Xylocopa dejeanii	5
+Xylocopa dimidiata	1
+Xylocopa disconata	1
+Xylocopa dissimilis	3
+Xylocopa elegans	1
+Xylocopa erythrina	5
+Xylocopa fenestrata	12
+Xylocopa fimbriata	5
+Xylocopa flavicollis	13
+Xylocopa flavifrons	8
+Xylocopa flavorufa	31
+Xylocopa frontalis	140
+Xylocopa gabonica	1
+Xylocopa grisescens	1
+Xylocopa gualanensis	1
+Xylocopa guatemalensis	4
+Xylocopa hirsutissima	2
+Xylocopa hottentotta	5
+Xylocopa inconstans	17
+Xylocopa iridipennis	15
+Xylocopa iris	29
+Xylocopa lanata	1
+Xylocopa lateralis	2
+Xylocopa lateritia	1
+Xylocopa latipes	4
+Xylocopa leucocephala	1
+Xylocopa lieftincki	1
+Xylocopa loripes	1
+Xylocopa lugubris	4
+Xylocopa macrops	4
+Xylocopa madida	1
+Xylocopa mexicana	1
+Xylocopa mexicanorum	10
+Xylocopa micans	65
+Xylocopa micheneri	2
+Xylocopa mirabilis	2
+Xylocopa modesta	3
+Xylocopa mordax	5
+Xylocopa muscaria	5
+Xylocopa nasalis	2
+Xylocopa nautlana	5
+Xylocopa nigrita	39
+Xylocopa nigroclypeata	1
+Xylocopa nobilis	1
+Xylocopa nogueirai	4
+Xylocopa ogasawarensis	1
+Xylocopa olivacea	16
+Xylocopa olivieri	2
+Xylocopa ornata	1
+Xylocopa parvula	3
+Xylocopa phalothorax	3
+Xylocopa provida	1
+Xylocopa pubescens	13
+Xylocopa pulchra	1
+Xylocopa rufa	3
+Xylocopa ruficeps	3
+Xylocopa ruficollis	1
+Xylocopa ruficornis	2
+Xylocopa rufitarsis	5
+Xylocopa scioensis	17
+Xylocopa senior	4
+Xylocopa sicheli	1
+Xylocopa smithii	1
+Xylocopa somalica	4
+Xylocopa sonorina	80
+Xylocopa sp.	14
+Xylocopa sp. 1	6
+Xylocopa sp. 1 nds	1
+Xylocopa sp. 1YB	1
+Xylocopa sp. 2	6
+Xylocopa sp. 2YB	2
+Xylocopa sp. 3	1
+Xylocopa sp. 4	1
+Xylocopa sp. AK-2008	1
+Xylocopa sp. Bharsar	1
+Xylocopa sp. DS-2005	1
+Xylocopa sp. HMG-2011	41
+Xylocopa sp. Kyr3-14	1
+Xylocopa sp. Kyr4-10	1
+Xylocopa sp. Kyr4-8	1
+Xylocopa sp. Kyr4-9	1
+Xylocopa sp. Pantnagar	1
+Xylocopa sp. aff. collaris	1
+Xylocopa sp. serian	1
+Xylocopa splendidula	5
+Xylocopa stanleyi	1
+Xylocopa sulcatipes	1
+Xylocopa tabaniformis	16
+Xylocopa tenuiscapa	9
+Xylocopa torrida	5
+Xylocopa tranquebarica	2
+Xylocopa tranquebarorum	9
+Xylocopa truxali	1
+Xylocopa valga	14
+Xylocopa varentzowi	2
+Xylocopa varipes	1
+Xylocopa varipuncta	9
+Xylocopa vestita	1
+Xylocopa violacea	54
+Xylocopa virginica	138
+Xylocopa viridigastra	3
+Xylocopa viridis	1
+Xylocopa waterhousei	1
+Xylocopa watmoughi	1
+Xylocopa.sp	183
