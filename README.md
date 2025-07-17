@@ -64,15 +64,15 @@ The full analysis pipeline involved the following steps:
 
   Use MUSCLE v3.8.31 to perform multiple sequence alignment on the concatenated FASTA file.
   ```bash
-    ./muscle3.8.31_i86linux64 -in Xylocopa_Final.fasta -out Xylocopa_aligned.fasta
+  ./muscle3.8.31_i86linux64 -in Xylocopa_Final.fasta -out Xylocopa_aligned.fasta
  ```
 
 ### 7. **Build and Visualize Phylogenetic Tree**
 
 Load the IQ-TREE module and construct a phylogenetic tree:
  ```bash
-    module load iqtree/2.2.2.6
-    iqtree2 -s Xylocopa_aligned.fasta
+ module load iqtree/2.2.2.6
+ iqtree2 -s Xylocopa_aligned.fasta
  ```
 To visualize the tree:
 
