@@ -15,63 +15,70 @@ This project aimed to analyze the phylogeny of the genus *Xylocopa*. The workflo
 
 The full analysis pipeline involved the following steps:
 
-###1. **Data Retrieval**
+### 1. **Data Retrieval**
 
    Download sequences from BOLD:
    ```bash
-   bash BOLD_FASTA.sh -t Xylocopa -m COI -o BOLD-COI.fasta```
+   bash BOLD_FASTA.sh -t Xylocopa -m COI -o BOLD-COI.fasta
+  ```
 
    Download sequences from NCBI:
    ```bash
    bash NCBI_NUCLEOTIDE.sh -t Xylocopa -m COI -o NCBI-COI.fasta
    bash NCBI_NUCLEOTIDE.sh -t Xylocopa -m COX1 -o NCBI-COX1.fasta
    bash NCBI_NUCLEOTIDE.sh -t Xylocopa -m PEPCK -o NCBI-PEPCK.fasta
-   bash NCBI_NUCLEOTIDE.sh -t Xylocopa -m EF1A -o NCBI-EF1A.fasta```
+   bash NCBI_NUCLEOTIDE.sh -t Xylocopa -m EF1A -o NCBI-EF1A.fasta
+  ```
 
-###2. **Sequence Deduplication and Merging**
+### 2. **Sequence Deduplication and Merging**
    Use the `dedup_fasta.sh` script to compare accessions from both sources and merge them into a unified, deduplicated FASTA:
    ```bash
-   bash dedup_fasta.sh -o BN-COI BOLD-COI.fasta NCBI-COI.fasta```
+   bash dedup_fasta.sh -o BN-COI BOLD-COI.fasta NCBI-COI.fasta
+  ```
 
-###3. **Split by Species**
+### 3. **Split by Species**
 
   Split cleaned FASTA into per-species files:
   ```bash
   bash split_by_species.sh NCBI-COX1.fasta
   bash split_by_species.sh NCBI-PEPCK.fasta
   bash split_by_species.sh NCBI-EF1A.fasta
-  bash split_by_species.sh BN-COI.fasta```
+  bash split_by_species.sh BN-COI.fasta
+  ```
 
-###4. **Identify Common Species Across Markers**
+### 4. **Identify Common Species Across Markers**
 
   After generating species lists for each gene marker, use the `common_species.sh` script to find species present in *all* markers. This ensures downstream analyses focus on species with multi-locus data.
   ```bash
-  bash common_species.sh NCBI-COX1/species_list.txt NCBI-PEPCK/species_list.txt NCBI-EF1A/species_list BN-COI/species_list```
+  bash common_species.sh NCBI-COX1/species_list.txt NCBI-PEPCK/species_list.txt NCBI-EF1A/species_list BN-COI/species_list
+  ```
 
 ### 5. **Concatenate Random Sequences Across Markers**
 
   Using the `RandCatSeq.sh` script, concatenate one randomly selected sequence per species from each marker directory into a single multi-locus FASTA file.
   ```bash
-  bash RandCatSeq.sh -o Xylocopa_Final.fasta species_list.txt NCBI-COX1/ NCBI-PEPCK/ NCBI-EF1A/ BN-COI/```
+  bash RandCatSeq.sh -o Xylocopa_Final.fasta species_list.txt NCBI-COX1/ NCBI-PEPCK/ NCBI-EF1A/ BN-COI/
+  ```
 
 ### 6. **Align Concatenated Sequences**
 
   Use MUSCLE v3.8.31 to perform multiple sequence alignment on the concatenated FASTA file.
   ```bash
-    ./muscle3.8.31_i86linux64 -in Xylocopa_Final.fasta -out Xylocopa_aligned.fasta```
+    ./muscle3.8.31_i86linux64 -in Xylocopa_Final.fasta -out Xylocopa_aligned.fasta
+ ```
 
 ### 7. **Build and Visualize Phylogenetic Tree**
 
 Load the IQ-TREE module and construct a phylogenetic tree:
     ```bash
     module load iqtree/2.2.2.6
-    iqtree2 -s Xylocopa_aligned.fasta```
+    iqtree2 -s Xylocopa_aligned.fasta
+    ```
+To visualize the tree:
 
-    To visualize the tree:
+-Download the `.treefile` to your local machine (Use `scp`).
 
-    -Download the `.treefile` to your local machine (Use `scp`).
-   
-    -Open it with [**FigTree**](http://tree.bio.ed.ac.uk/software/figtree/).
+-Open it with [**FigTree**](http://tree.bio.ed.ac.uk/software/figtree/).
 
 ---
 ## Results and Discussion
@@ -202,7 +209,8 @@ It is useful for cleaning and combining datasets from different sources (e.g., B
 Run the script from the terminal with:
 
 ```bash
-bash dedup_fasta.sh [-o OUTPUT_BASENAME] file1.fasta file2.fasta```
+bash dedup_fasta.sh [-o OUTPUT_BASENAME] file1.fasta file2.fasta
+```
 
 ---
 
@@ -231,7 +239,7 @@ This script processes a FASTA file and splits it into **one file per species**, 
 
 ```bash
 bash split_by_species.sh [-d] input.fasta
-
+```
 ---
 
 ## Common Species Finder  
@@ -249,7 +257,8 @@ This script identifies the species names **common to multiple input species list
 ### Usage
 
 ```bash
-bash common_species.sh file1.txt file2.txt [file3.txt ...]```
+bash common_species.sh file1.txt file2.txt [file3.txt ...]
+```
 
 ---
 
