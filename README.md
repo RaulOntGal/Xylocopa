@@ -70,10 +70,10 @@ The full analysis pipeline involved the following steps:
 ### 7. **Build and Visualize Phylogenetic Tree**
 
 Load the IQ-TREE module and construct a phylogenetic tree:
-    ```bash
+ ```bash
     module load iqtree/2.2.2.6
     iqtree2 -s Xylocopa_aligned.fasta
-    ```
+ ```
 To visualize the tree:
 
 -Download the `.treefile` to your local machine (Use `scp`).
